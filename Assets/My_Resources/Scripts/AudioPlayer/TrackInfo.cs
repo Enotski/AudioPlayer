@@ -19,6 +19,7 @@ public class TrackInfo : MonoBehaviour
 
     public Image checMark;
     public Image bg;
+    public Image btn;
 
     public bool isToRemoveState
     {
@@ -33,6 +34,8 @@ public class TrackInfo : MonoBehaviour
     public Color selectedBgColor;
     public Color normalTextColor;
     public Color normalBgColor;
+    public Color btnImgColorOnItemSelected;
+    public Color btnImgColorOnItemNormal;
 
     private bool isSelected = false;
     private bool isFavorite = false;
@@ -63,6 +66,7 @@ public class TrackInfo : MonoBehaviour
                 textTrackNum.color = selectedTextColor;
                 textTrackName.color = selectedTextColor;
                 textTrackDuration.color = selectedTextColor;
+                btn.color = btnImgColorOnItemSelected;
                 bg.color = selectedBgColor;
             }
             else
@@ -70,6 +74,7 @@ public class TrackInfo : MonoBehaviour
                 textTrackNum.color = normalTextColor;
                 textTrackName.color = normalTextColor;
                 textTrackDuration.color = normalTextColor;
+                btn.color = btnImgColorOnItemNormal;
                 bg.color = normalBgColor;
             }
         }

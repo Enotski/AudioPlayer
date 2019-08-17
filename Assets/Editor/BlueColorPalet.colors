@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12323, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: BlueColorPalet
+  m_EditorClassIdentifier: 
+  m_Presets:
+  - m_Name: 
+    m_Color: {r: 0.5409836, g: 0.76502734, b: 1, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.3882353, g: 0.54901963, b: 0.7176471, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.23137255, g: 0.3882353, b: 0.57254905, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.827451, g: 0.85882354, b: 0.8901961, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.105882354, g: 0.14901961, b: 0.21176471, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.16470589, g: 0.29411766, b: 0.43529412, a: 1}
