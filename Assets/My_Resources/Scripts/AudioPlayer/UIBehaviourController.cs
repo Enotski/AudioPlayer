@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class UIBehaviourController : MonoBehaviour
@@ -55,6 +56,8 @@ public class UIBehaviourController : MonoBehaviour
     private bool startToRemove;
     private bool checkAll = true;
     private bool _isActiveHidePanel;
+
+    private StringBuilder stringBuilder = new StringBuilder();
     public bool IsActiveHidePanel
     {
         get
@@ -93,6 +96,10 @@ public class UIBehaviourController : MonoBehaviour
         TrackListInitialization();
     }
 
+    public void OnButtonClick(BaseEventData args)
+    {
+
+    }
    /// <summary>
    /// Transition between panels
    /// </summary>

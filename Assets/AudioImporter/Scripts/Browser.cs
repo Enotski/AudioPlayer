@@ -46,7 +46,6 @@ public class Browser : MonoBehaviour
     private HashSet<string> checkedFiles;
     private bool selectDrive;
     private bool scrolling;
-    private bool checkAll = true;
     public int checkedCount;
     void Awake()
     {
@@ -87,8 +86,10 @@ public class Browser : MonoBehaviour
     public void onCloseBrowser()
     {
         checkedCount = 0;
-        checkAll = false;
         gameObject.SetActive(false);
+        var allItems = content.GetComponentsInChildren<DirectoryNode>();
+        foreach (var node in allItems)
+            node.onBrowserClosed();
     }
     private void BuildContent()
     {
@@ -221,10 +222,8 @@ public class Browser : MonoBehaviour
     {
         var allItems = content.GetComponentsInChildren<DirectoryNode>();
         foreach (var node in allItems)
-        {
-            node.Checked = checkAll;
-        }
-        checkAll = !checkAll;
+            node.OnCheck();
+        
     }
     public void OnCheckedStateChanged(bool state, string fileName)
     {

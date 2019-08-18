@@ -15,8 +15,8 @@ public class DirectoryNode : MonoBehaviour
         get { return _checkState; }
         set
         {
-            _checkState = value;
             toggle.isOn = value;
+            _checkState = value;           
             OnStateChanged?.Invoke(_checkState, FullName);
         }
     }
@@ -24,6 +24,15 @@ public class DirectoryNode : MonoBehaviour
     
     public void OnCheck()
     {
+        if (toggle == null)
+            return;
         Checked = !Checked;
+    }
+
+    public void onBrowserClosed()
+    {
+        if (toggle == null)
+            return;
+        Checked = false;
     }
 }
